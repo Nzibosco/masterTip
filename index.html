@@ -50,13 +50,44 @@
                 <div class="collapse" id="if-split">
                     <div class="form-group text-center">
                         <label for="split"class = "lead">How many people on the table?</label> <br>
-                        <input type="number" value=1 placeholder="Enter number of people to split the tip" name="split-tip" id="split">
+                        <input type="number" value=1 placeholder="People to split the tip" name="split-tip" id="split">
                     </div>
                 </div>
-                <button type = "submit" id = "form-submit" class = "btn btn-primary">Submit</button>
+                <div class = "form-group text-center" id = "form-button">
+                    <button type = "submit" id = "form-submit" class = "btn btn-primary">Submit</button>
+                </div>
             </form>
         </div>
+        <!-- Dashboard displaying tip details -->
+        <div class = "jumbotron col-md-6" id = "dashboard">
+            <div id = "for-tip" class ="main text-center">
+                <h1 class = "display-4" id = "amount">0</h1>
+                <p class = "lead">Total tip to pay</p>
+            </div>
+            <div class = "main" id = "details">
+                <div class = "row text-center" id = "details-row">
+                    <div class = "value col-md-4" id = "bill-details">
+                        <strong id = "bill-final">0</strong>
+                        <p class = "lead">Bill Amount</p>
+                    </div>
+                    <div class = "value col-md-4" id = "tip-details">
+                        <strong id = "tip-final">2<span id = "tip-percent"></span>%</strong>
+                        <p class = "lead">Percentage of tip</p>
+                    </div>
+                    <div class = "value col-md-4" id = "table-details">
+                        <strong id = "table-final">1</strong>
+                        <p class = "lead">People on table</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <br>
+    <br>
+    <!-- Footer with link to Developer's portfolio -->
+    <footer class = "page-footer text-center">
+        <a href = "https://nzibosco.github.io/Portfolio/" target = "_blank" id = "footer-link">&copy Bosco</a>
+    </footer>
 
 </body>
 
