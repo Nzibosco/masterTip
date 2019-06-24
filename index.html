@@ -42,18 +42,18 @@
                 </div>
                 <!-- if splitting tip is desired -->
                 <p class="lead text-center">Do you want to split this tip?</p>
-                <div class="lead text-center">
+                <div class="form-group lead text-center">
                     <input name="splitting" type="radio" id="radio-yes" data-toggle="collapse" data-target="#if-split"
                         value="Yes">Yes
                     <input name="splitting" type="radio" id="radio-no" value="No">No
                 </div>
                 <div class="collapse" id="if-split">
                     <div class="form-group text-center">
-                        <label for="split">How many people on the table?</label> <br>
-                        <input type="number" value=1 placeholder="Enter number of people to split the tip"
-                            name="split-tip" id="split">
+                        <label for="split"class = "lead">How many people on the table?</label> <br>
+                        <input type="number" value=1 placeholder="Enter number of people to split the tip" name="split-tip" id="split">
                     </div>
                 </div>
+                <button type = "submit" id = "form-submit" class = "btn btn-primary">Submit</button>
             </form>
         </div>
     </div>
