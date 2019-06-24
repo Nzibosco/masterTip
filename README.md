@@ -1,3 +1,3 @@
 # masterTip
 
-## Tip made easy!!
+## Tipping made easy!!
