@@ -36,11 +36,11 @@
         <div class="jumbotron col-md-6" id="input-form">
             <form>
                 <div class="form-row">
-                    <div class="form-group">
+                    <div class="form-group col-md-5">
                         <label for="bill">Bill amount</label>
                         <input name="bill-value" type="number" id="bill" placeholder="enter bill amount">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group col-md-7">
                         <label for="tip">Desired tip percentage (%)</label>
                         <input name="tip" type="number" id="tip-share" placeholder="Enter % to tip">
                     </div>
@@ -76,7 +76,7 @@
                         <p class="lead">Bill Amount</p>
                     </div>
                     <div class="value col-md-4" id="tip-details">
-                        <strong id="tip-final">2<span id="tip-percent"></span>%</strong>
+                        <p id="tip-percent"><strong id="tip-final"></strong>%</p>
                         <p class="lead">Percentage of tip</p>
                     </div>
                     <div class="value col-md-4" id="table-details">
