@@ -48,8 +48,7 @@
                 <!-- if splitting tip is desired -->
                 <p class="lead text-center">Do you want to split this tip?</p>
                 <div class="form-group lead text-center">
-                    <input name="splitting" type="radio" id="radio-yes" data-toggle="collapse" data-target="#if-split"
-                        value="Yes">Yes
+                    <input name="splitting" type="radio" id="radio-yes" data-toggle="collapse" data-target="#if-split" value="Yes">Yes
                     <input name="splitting" type="radio" id="radio-no" value="No">No
                 </div>
                 <div class="collapse" id="if-split">
@@ -66,22 +65,26 @@
         <!-- Dashboard displaying tip details -->
         <div class="jumbotron col-md-6" id="dashboard">
             <div id="for-tip" class="main text-center">
-                <h1 class="display-4" id="amount">0</h1>
+                <h1 class="display-4" id="amount">0$</h1>
                 <p class="lead">Total tip to pay</p>
             </div>
             <div class="main" id="details">
                 <div class="row text-center" id="details-row">
-                    <div class="value col-md-4" id="bill-details">
-                        <strong id="bill-final">0</strong>
-                        <p class="lead">Bill Amount</p>
+                    <div class="value col-md-3" id="bill-details">
+                        <p><strong id="bill-final">0</strong></p>
+                        <small class="lead">Bill Amount</small>
                     </div>
-                    <div class="value col-md-4" id="tip-details">
+                    <div class="value col-md-3" id="tip-details">
                         <p id="tip-percent"><strong id="tip-final"></strong>%</p>
-                        <p class="lead">Percentage of tip</p>
+                        <small class="lead">Tip</small>
                     </div>
-                    <div class="value col-md-4" id="table-details">
-                        <strong id="table-final">1</strong>
-                        <p class="lead">People on table</p>
+                    <div class="value col-md-3" id="table-details">
+                        <p><strong id="table-final">1</strong> People</p>
+                        <small class="lead">Split among</small>
+                    </div>
+                    <div class="value col-md-3" id="share-details">
+                        <p><strong id="share-final">0</strong> $</p>
+                        <small class="lead">Each one pays</small>
                     </div>
                 </div>
             </div>
