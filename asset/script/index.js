@@ -55,7 +55,7 @@ $(document).ready(function () {
             };
             tipToPay();
         } else {
-            // if no split needed, we will go straight to calculating tip only
+            // if no split needed, we will go straight to calculating the tip only
             function tipToPay() {
                 tip = bill * tipPercent / 100;
                 console.log(tip);
