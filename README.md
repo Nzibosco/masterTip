@@ -12,6 +12,14 @@ For example, if a final bill presented to the customer is $200, and the customer
 
 Going back to the $40 tip, if, for example, there were 3 people on the table, everyone would contribute $13.33 - a reasonable amount compared to paying the whole tip alone.
 
-#### see this in action
+#### See this in action
 
 ![tip](/asset/images/app-screenshot.png)
+
+# How it works 
+
+# Technology 
+
+# Deployment 
+
+# Future plan

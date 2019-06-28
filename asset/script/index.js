@@ -67,6 +67,11 @@ $(document).ready(function () {
             };
             tipToPay();
         }
+
+        // clear the form after it is submitted 
+        $("#bill").val("");
+        $("#tip-share").val("");
+        $("#split").val("");
     })
 
 
