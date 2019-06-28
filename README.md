@@ -4,7 +4,7 @@
 
 Click here to access the deployed link: [MasterTip](https://mastertip.herokuapp.com/) 
 
-#Overview 
+# Overview 
 
 MasterTip is a fast and easy to use web application used to calculate tips. 
 The application offers an option to split the tip among table members, which is a critical feature especially for cases involving big tips. 
@@ -12,6 +12,6 @@ For example, if a final bill presented to the customer is $200, and the customer
 
 Going back to the $40 tip, if, for example, there were 3 people on the table, everyone would contribute $13.33 - a reasonable amount compared to paying the whole tip alone.
 
-####see this in action
+#### see this in action
 
-![tip]("/Users/bosco/Documents/vanderbilt coding bootcamp/masterTip/asset/images/app-screenshot.png")
+![tip]("asset/images/app-screenshot.png")
