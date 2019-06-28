@@ -14,4 +14,4 @@ Going back to the $40 tip, if, for example, there were 3 people on the table, ev
 
 #### see this in action
 
-![tip]("asset/images/app-screenshot.png")
+![tip](/asset/images/app-screenshot.png)
