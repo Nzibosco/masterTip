@@ -40,10 +40,11 @@ $(document).ready(function () {
 
             function tipToPay() {
                 tip = bill * tipPercent / 100;
+                // +tip.toFixed(2); // the toFixed method will round decimals and restricts them to only two.
                 console.log(tip);
 
                 // now share the tip among table members
-                share = tip / peopleOnTable;
+                share = +(tip / peopleOnTable).toFixed(2);
                 console.log(share);
                 finalBill = parseFloat(bill) + parseFloat(tip);
 
@@ -58,8 +59,10 @@ $(document).ready(function () {
             // if no split needed, we will go straight to calculating the tip only
             function tipToPay() {
                 tip = bill * tipPercent / 100;
+                +tip.toFixed(2);
                 console.log(tip);
                 finalBill = parseFloat(bill) + parseFloat(tip);
+                +finalBill.toFixed(2);
 
                 // assign tip, final bill and share values to the page
                 $("#amount").text(tip);
