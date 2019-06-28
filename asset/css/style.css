@@ -3,21 +3,23 @@
     width: 40%;
     border-radius: 20px;
 }
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 
 /* style for header */
 #info-panel {
+    color:black;
+    font-size: 30px;
     background-color: cornflowerblue
 }
 
-/* style for form */
-#input-form {
+/* style for form and the dashbord */
+#input-form, #dashboard  {
     border-radius: 70px;
+    background-color: khaki
 }
 
-/* style for dashbord */
-#dashboard{
-    border-radius: 70px;
-}
 @media screen and (max-width: 1600px) {
 #bill-details, #tip-details, #table-details {
     border-right-color: blueviolet;
