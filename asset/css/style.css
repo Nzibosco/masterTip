@@ -1,0 +1,26 @@
+/* general styling */
+#bill, #tip-share, #split {
+    width: 40%;
+    border-radius: 20px;
+}
+/* style for header */
+#info-panel {
+    background-color: cornflowerblue
+}
+/* style for form */
+/* style for dashbord */
+#dashboard, #input-form {
+    border-radius: 70px;
+}
+/* style for footer */
+
+footer {
+    padding: 3%;
+    background-color: black;
+}
+
+/* style for line break */
+hr {
+   background-color: blueviolet;
+   height: 2px;
+}
