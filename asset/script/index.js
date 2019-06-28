@@ -34,13 +34,14 @@ $(document).ready(function () {
         if ($("#radio-yes").is(":checked")) {
             console.log("checked");
             function tipToPay() {
-                tip = bill * tipPercent / 100;
+                // the toFixed method will round decimals and restricts them to only two.
+                tip = +(bill * tipPercent / 100).toFixed(2); // the + sign will convert it back to a number
                 console.log(tip);
 
                 // now share the tip among table members
-                share = +(tip / peopleOnTable).toFixed(2); // the toFixed method will round decimals and restricts them to only two.
+                share = +(tip / peopleOnTable).toFixed(2);
                 console.log(share);
-                finalBill = parseFloat(bill) + parseFloat(tip);
+                finalBill = +(parseFloat(bill) + parseFloat(tip)).toFixed(2);
 
                 // assign tip and share values to tthe page
                 $("#amount").text(tip);
@@ -52,9 +53,9 @@ $(document).ready(function () {
         } else {
             // if no split needed, we will go straight to calculating the tip only
             function tipToPay() {
-                tip = bill * tipPercent / 100;
+                tip = +(bill * tipPercent / 100).toFixed(2);
                 console.log(tip);
-                finalBill = parseFloat(bill) + parseFloat(tip);
+                finalBill = +(parseFloat(bill) + parseFloat(tip)).toFixed(2);
 
                 // assign tip, final bill and share values to the page
                 $("#amount").text(tip);
