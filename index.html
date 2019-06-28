@@ -38,23 +38,24 @@
                 <div class="form-row">
                     <div class="form-group col-md-5">
                         <label for="bill">Bill amount</label>
-                        <input name="bill-value" type="number" id="bill" placeholder="enter bill amount" min="1" step="0.01" oninput="this.value = Math.abs(this.value)">
+                        <input name="bill-value" type="number" id="bill" placeholder="enter amount" min="1" step="0.01" oninput="this.value = Math.abs(this.value)" required>
                     </div>
                     <div class="form-group col-md-7">
-                        <label for="tip">Desired tip percentage (%)</label>
-                        <input name="tip" type="number" id="tip-share" placeholder="Enter % to tip" min="0" step="0.01" oninput="this.value = Math.abs(this.value)">
+                        <label for="tip">Tip percentage</label>
+                        <input name="tip" type="number" id="tip-share" placeholder="% to tip" min="1" step="0.01" required>
                     </div>
                 </div>
                 <!-- if splitting tip is desired -->
                 <p class="lead text-center">Do you want to split this tip?</p>
+                <small id = "warn-user"></small>
                 <div class="form-group lead text-center">
-                    <input name="splitting" type="radio" id="radio-yes" data-toggle="collapse" data-target="#if-split" value="Yes">Yes
-                    <input name="splitting" type="radio" id="radio-no" value="No">No
+                    <input name="splitting" type="radio" id="radio-yes" data-toggle="collapse" data-target="#if-split" value="Yes" required>Yes
+                    <input name="splitting" type="radio" id="radio-no" value="No" required>No
                 </div>
                 <div class="collapse" id="if-split">
                     <div class="form-group text-center">
                         <label for="split" class="lead">How many people on the table?</label> <br>
-                        <input type="number" placeholder="People to split the tip" name="split-tip" id="split" min="0" oninput="this.value = Math.abs(this.value)">
+                        <input type="number" placeholder="People to split the tip" name="split-tip" id="split" min="1">
                     </div>
                 </div>
                 <div class="form-group text-center" id="form-button">
@@ -79,7 +80,7 @@
                         <small class="lead">Tip</small>
                     </div>
                     <div class="value col-md-3" id="table-details">
-                        <p><strong id="table-final"></strong></p>
+                        <p><strong id="table-final">1</strong></p>
                         <small class="lead">Split among</small>
                     </div>
                     <div class="value col-md-3" id="share-details">

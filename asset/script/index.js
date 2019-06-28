@@ -17,34 +17,28 @@ $(document).ready(function () {
     $("").text(peopleOnTable);
 
     //  Submit form
-    $("form").on("submit", function (event) {
+    $("form").on("submit", function (event) {      
         event.preventDefault();
-
+ 
         // Vars to grab user inputs 
         let bill = $("#bill").val();
         let tipPercent = $("#tip-share").val();
         let peopleOnTable = $("#split").val();
 
-        console.log("tip: " + tip + " bill: " + bill + " tip %: " + tipPercent + " people on table: " + peopleOnTable);
-
-        //assign values to the Dashboard 
-        
+        //assign values to the Dashboard        
         $("#tip-final").text(tipPercent);
         $("#table-final").text(peopleOnTable);
 
         //calculate tip
         // ...first check if the tip will be splitted then split the tip among table members
-
         if ($("#radio-yes").is(":checked")) {
             console.log("checked");
-
             function tipToPay() {
                 tip = bill * tipPercent / 100;
-                // +tip.toFixed(2); // the toFixed method will round decimals and restricts them to only two.
                 console.log(tip);
 
                 // now share the tip among table members
-                share = +(tip / peopleOnTable).toFixed(2);
+                share = +(tip / peopleOnTable).toFixed(2); // the toFixed method will round decimals and restricts them to only two.
                 console.log(share);
                 finalBill = parseFloat(bill) + parseFloat(tip);
 
@@ -52,25 +46,21 @@ $(document).ready(function () {
                 $("#amount").text(tip);
                 $("#share-final").text(share);
                 $("#bill-final").text(finalBill);
-                
+                console.log("tip: " + tip + " bill: " + bill + " tip %: " + tipPercent + " people on table: " + peopleOnTable);      
             };
             tipToPay();
         } else {
             // if no split needed, we will go straight to calculating the tip only
             function tipToPay() {
                 tip = bill * tipPercent / 100;
-                +tip.toFixed(2);
                 console.log(tip);
                 finalBill = parseFloat(bill) + parseFloat(tip);
-                +finalBill.toFixed(2);
 
                 // assign tip, final bill and share values to the page
                 $("#amount").text(tip);
                 $("#share-final").text(tip);
                 $("#bill-final").text(finalBill);
-
-                // set people on the table to one
-                $("#table-final").text(1);
+                console.log("tip: " + tip + " bill: " + bill + " tip %: " + tipPercent + " people on table: " + peopleOnTable);
                 
             };
             tipToPay();
