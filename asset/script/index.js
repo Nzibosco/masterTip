@@ -61,6 +61,7 @@ $(document).ready(function () {
                 $("#amount").text(tip);
                 $("#share-final").text(tip);
                 $("#bill-final").text(finalBill);
+                $("#table-final").text(1);
                 console.log("tip: " + tip + " bill: " + bill + " tip %: " + tipPercent + " people on table: " + peopleOnTable);
                 
             };
