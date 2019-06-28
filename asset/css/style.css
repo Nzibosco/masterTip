@@ -3,17 +3,38 @@
     width: 40%;
     border-radius: 20px;
 }
+
 /* style for header */
 #info-panel {
     background-color: cornflowerblue
 }
+
 /* style for form */
-/* style for dashbord */
-#dashboard, #input-form {
+#input-form {
     border-radius: 70px;
 }
-/* style for footer */
 
+/* style for dashbord */
+#dashboard{
+    border-radius: 70px;
+}
+@media screen and (max-width: 1600px) {
+#bill-details, #tip-details, #table-details {
+    border-right-color: blueviolet;
+    border-right-style: solid;
+    border-right-width: 2px;
+}
+}
+@media screen and (max-width: 790px) {
+    #bill-details, #tip-details, #table-details {
+        border-right-style: none;
+        border-bottom-color: blueviolet;
+        border-bottom-style: solid;
+        border-bottom-width: 2px;
+        border-bottom-style: dotted;
+    }
+    }
+/* style for footer */
 footer {
     padding: 3%;
     background-color: black;
