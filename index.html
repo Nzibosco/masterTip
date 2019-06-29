@@ -18,8 +18,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-        <!-- link to font awesome -->
-        <script src="https://kit.fontawesome.com/6cc73f13a1.js"></script>
+    <!-- link to font awesome -->
+    <script src="https://kit.fontawesome.com/6cc73f13a1.js"></script>
     <!-- jquery link -->
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
@@ -31,79 +31,83 @@
     <!-- A jumbotron to contain opening info -->
     <div class="jumbotron text-center" id="info-panel">
         <h1 class="display-4" id="title">MasterTip</h1>
-        <p  id="slogan"><b>Awesome And Easy to Use Tip Calculator</b></p>
+        <p id="slogan"><b>Awesome And Easy to Use Tip Calculator</b></p>
     </div>
-    <div class = "container-fluid" id = "container">
-    <div class="row" id="main-panel">
-        <div class="jumbotron col-md-6" id="input-form">
-            <!-- form for input collection -->
-            <form>
-                <div class="form-row text-center">
-                    <div class="form-group col-md-6">
-                        <label for="bill">Bill amount</label> <br>
-                        <input name="bill-value" type="number" id="bill" placeholder="amount" min="1" step="0.01" required>
+    <div class="container-fluid" id="container">
+        <div class="row" id="main-panel">
+            <div class="jumbotron col-md-6" id="input-form">
+                <!-- form for input collection -->
+                <form>
+                    <div class="form-row text-center">
+                        <div class="form-group col-md-6">
+                            <label for="bill">Bill amount</label> <br>
+                            <input name="bill-value" type="number" id="bill" placeholder="amount" min="1" step="0.01"
+                                required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="tip">Tip percentage</label><br>
+                            <input name="tip" type="number" id="tip-share" placeholder="% to tip" min="1" step="0.01"
+                                required>
+                        </div>
                     </div>
-                    <div class="form-group col-md-6">
-                        <label for="tip">Tip percentage</label><br>
-                        <input name="tip" type="number" id="tip-share" placeholder="% to tip" min="1" step="0.01" required>
+                    <!-- if splitting tip is desired -->
+                    <p class="lead text-center">Do you want to split this tip?</p>
+                    <small id="warn-user"></small>
+                    <div class="form-group lead text-center">
+                        <input name="splitting" type="radio" id="radio-yes" data-toggle="collapse"
+                            data-target="#if-split" value="Yes" required>Yes
+                        <input name="splitting" type="radio" id="radio-no" value="No" required>No
                     </div>
-                </div>
-                <!-- if splitting tip is desired -->
-                <p class="lead text-center">Do you want to split this tip?</p>
-                <small id = "warn-user"></small>
-                <div class="form-group lead text-center">
-                    <input name="splitting" type="radio" id="radio-yes" data-toggle="collapse" data-target="#if-split" value="Yes" required>Yes
-                    <input name="splitting" type="radio" id="radio-no" value="No" required>No
-                </div>
-                <div class="collapse" id="if-split">
-                    <div class="form-group text-center">
-                        <label for="split" class="lead">How many people on the table?</label> <br>
-                        <input type="number" placeholder="People to split the tip" name="split-tip" id="split" min="1" value = "1">
+                    <div class="collapse" id="if-split">
+                        <div class="form-group text-center">
+                            <label for="split" class="lead">How many people on the table?</label> <br>
+                            <input type="number" placeholder="People to split the tip" name="split-tip" id="split"
+                                min="1" value="1">
+                        </div>
                     </div>
-                </div>
-                <div class="form-group text-center" id="form-button">
-                    <button type="submit" id="form-submit" class="btn btn-success">Submit</button>
-                </div>
-            </form>
-        </div>
-        <!-- Dashboard displaying tip details -->
-        <div class="jumbotron col-md-6" id="dashboard">
-            <div id="for-tip" class="main text-center">
-                <h1 class="display-4">$<span id="amount" class="display-4">0</span></h1>
-                <p class="lead">Total tip to pay</p>
+                    <div class="form-group text-center" id="form-button">
+                        <button type="submit" id="form-submit" class="btn btn-success">Submit</button>
+                    </div>
+                </form>
             </div>
-            <hr>
-            <div class="main" id="details">
-                <div class="row text-center" id="details-row">
-                    <div class="value col-md-3" id="bill-details">
-                        <p>$<strong id="bill-final">0</strong></p>
-                        <p><i class="fas fa-arrow-up"></i></p>
-                        <small class="lead">Final amount</small>
-                    </div>
-                    <div class="value col-md-3" id="tip-details">
-                        <p id="tip-percent"><strong id="tip-final"></strong>%</p>
-                        <p><i class="fas fa-arrow-up"></i></p>
-                        <small class="lead">Tip</small>
-                    </div>
-                    <div class="value col-md-3" id="table-details">
-                        <p><strong id="table-final">1</strong></p>
-                        <p><i class="fas fa-arrow-up"></i></p>
-                        <small class="lead">Split among</small>
-                    </div>
-                    <div class="value col-md-3" id="share-details">
-                        <p>$<strong id="share-final">0</strong> </p>
-                        <p><i class="fas fa-arrow-up"></i></p>
-                        <small class="lead">Each one pays</small>
+            <!-- Dashboard displaying tip details -->
+            <div class="jumbotron col-md-6" id="dashboard">
+                <div id="for-tip" class="main text-center">
+                    <h1 class="display-4">$<span id="amount" class="display-4">0</span></h1>
+                    <p class="lead">Total tip to pay</p>
+                </div>
+                <hr>
+                <div class="main" id="details">
+                    <div class="row text-center" id="details-row">
+                        <div class="value col-md-3" id="bill-details">
+                            <p>$<strong id="bill-final">0</strong></p>
+                            <p><i class="fas fa-arrow-up"></i></p>
+                            <small class="lead">Final amount</small>
+                        </div>
+                        <div class="value col-md-3" id="tip-details">
+                            <p id="tip-percent"><strong id="tip-final"></strong>%</p>
+                            <p><i class="fas fa-arrow-up"></i></p>
+                            <small class="lead">Tip</small>
+                        </div>
+                        <div class="value col-md-3" id="table-details">
+                            <p><strong id="table-final">1</strong></p>
+                            <p><i class="fas fa-arrow-up"></i></p>
+                            <small class="lead">Split among</small>
+                        </div>
+                        <div class="value col-md-3" id="share-details">
+                            <p>$<strong id="share-final">0</strong> </p>
+                            <p><i class="fas fa-arrow-up"></i></p>
+                            <small class="lead">Each one pays</small>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
     <br>
     <!-- Footer with link to Developer's portfolio -->
     <footer class="page-footer text-center">
-        <p class = "lead"><strong><a href="https://nzibosco.github.io/Portfolio/" target="_blank" id="footer-link">&copy Bosco</a></strong></p>
+        <p class="lead"><strong><a href="https://nzibosco.github.io/Portfolio/" target="_blank" id="footer-link">&copyBosco</a></strong></p>
     </footer>
     <!-- Javascript link -->
     <script type="text/Javascript" src="asset/script/index.js"></script>

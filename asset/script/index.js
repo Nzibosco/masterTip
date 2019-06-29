@@ -17,9 +17,9 @@ $(document).ready(function () {
     $("").text(peopleOnTable);
 
     //  Submit form
-    $("form").on("submit", function (event) {      
+    $("form").on("submit", function (event) {
         event.preventDefault();
- 
+
         // Vars to grab user inputs 
         let bill = $("#bill").val();
         let tipPercent = $("#tip-share").val();
@@ -47,7 +47,7 @@ $(document).ready(function () {
                 $("#amount").text(tip);
                 $("#share-final").text(share);
                 $("#bill-final").text(finalBill);
-                console.log("tip: " + tip + " bill: " + bill + " tip %: " + tipPercent + " people on table: " + peopleOnTable);      
+                console.log("tip: " + tip + " bill: " + bill + " tip %: " + tipPercent + " people on table: " + peopleOnTable);
             };
             tipToPay();
         } else {
@@ -63,16 +63,14 @@ $(document).ready(function () {
                 $("#bill-final").text(finalBill);
                 $("#table-final").text(1);
                 console.log("tip: " + tip + " bill: " + bill + " tip %: " + tipPercent + " people on table: " + peopleOnTable);
-                
+
             };
             tipToPay();
-        }
+        };
 
-        // clear the form after it is submitted 
+        // clear the form after submitting 
         $("#bill").val("");
         $("#tip-share").val("");
         $("#split").val("");
-    })
-
-
+    });
 })
