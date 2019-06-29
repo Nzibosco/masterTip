@@ -25,7 +25,8 @@ Users have an option to chose if the tip is to be splitted or not. If the split 
 
 This is a front end application that uses `html` for its web page. Bootstrap library was used to style the page, while `css` was also added to provide more styling option to the `html` content. We used JQuery as a Javascript library to offer dynamic contents and to perform all the calculations. 
 
-We prefered to use Bootstrap and html native form validation instead of Javascript. This is because the html native form / input control offered a flexible way to authenticate or validate entries from users. 
+We prefered to use Bootstrap and html native form validation instead of Javascript. This is because the html native form / input control offered a flexible way to authenticate or validate entries from users.
+This also helped avoid writing many lines of code in Javascript to handle the same problem. We believe the `form`'s own validation functionality makes code more cleaner, although Javascript event handlers can also be relied upon for advanced tasks.  
 
 We used functionalities such as `input type` , `step`, and `min` to restrict entries to our requirements. 
 
