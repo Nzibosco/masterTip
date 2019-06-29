@@ -23,11 +23,11 @@ Users have an option to chose if the tip is to be splitted or not. If the split 
 
 ## Technology 
 
-This is a front end application that uses ``html`` for its web page. Bootstrap library was used to style the page, while ``css`` was also added to provide more styling option to the ``html`` content. We used JQuery as a Javascript library to offer dynamic contents and to perform all the calculations. 
+This is a front end application that uses `html` for its web page. Bootstrap library was used to style the page, while `css` was also added to provide more styling option to the `html` content. We used JQuery as a Javascript library to offer dynamic contents and to perform all the calculations. 
 
 We prefered to use Bootstrap and html native form validation instead of Javascript. This is because the html native form / input control offered a flexible way to authenticate or validate entries from users. 
 
-We used functionalities such as ``input type`` , ``step``, and ``min`` to restrict entries to our requirements. 
+We used functionalities such as `input type` , `step`, and `min` to restrict entries to our requirements. 
 
 Below is a list of teechnologies we used: 
 
@@ -36,8 +36,8 @@ Below is a list of teechnologies we used:
 - JQuery
 - CSS. 
 
-Additionally we added a ``package.json`` with ``harp`` as the only dependency simply to be able to easily deploy our static site on Heroku. 
-There are so many ways we could have our static application deployed, but we preferred this method because, other than adding a ``package.json`` with ``harp`` as the only dependency in our project repository, we did not install any ``npm package`` for this application to work. 
+Additionally we added a `package.json` with `harp` as the only dependency simply to be able to easily deploy our static site on Heroku. 
+There are so many ways we could have our static application deployed, but we preferred this method because, other than adding a `package.json` with `harp` as the only dependency in our project repository, we did not install any `npm package` for this application to work. 
 
 ## Deployment 
 
